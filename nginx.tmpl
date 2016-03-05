@@ -1,6 +1,6 @@
 {{ define "upstream" }}
         {{ if .Address }}
-                {{/* If we got the containers from swarm and this container's port is published to host, use host IP:P$
+                {{/* If we got the containers from swarm and this container's port is published to host, use host IP:P$*/}}
                 {{ if and .Container.Node.ID .Address.HostPort }}
                         # {{ .Container.Node.Name }}/{{ .Container.Name }}                                             
                         server {{ .Container.Node.Address.IP }}:{{ .Address.HostPort }};
